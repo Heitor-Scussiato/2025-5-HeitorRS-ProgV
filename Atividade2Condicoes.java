@@ -8,7 +8,7 @@ public class Atividade2Condicoes {
 		Scanner key = new Scanner(System.in);
 		int exe = 1;
 		while (exe != 0) {
-			System.out.print("Digite o numero do exercício (0=sair): ");
+			System.out.print("\n Digite o numero do exercício (0=sair): ");
 			exe = key.nextInt();
 			if (exe == 1) {
 				exe1();
@@ -32,6 +32,7 @@ public class Atividade2Condicoes {
 				exeX();
 			} else {System.out.println("E404: Exe Not Found");}
 		}
+	}
 
 		public static void exe1() {
 			Scanner key = new Scanner(System.in);
@@ -134,7 +135,7 @@ public class Atividade2Condicoes {
 			}
 		}
 		public static void exe9() {
-			canner key = new Scanner(System.in);
+			Scanner key = new Scanner(System.in);
 			System.out.print("Digite um número Inteiro: ");
 			int n = key.nextInt();
 			if (n==1) {System.out.print("Domingo!");}
@@ -147,30 +148,84 @@ public class Atividade2Condicoes {
 			else {System.out.print("Erro: Valor Inválido");}
 		}
 		public static void exeX() {
-			
+			Scanner key = new Scanner(System.in);
+			System.out.print("Pense num dos animais | ele é mamifero? (sim/nao)");
+			String resposta = key.next();
+			if (resposta.equalsIgnoreCase("s")) {
+				System.out.print("Ele é quadrupede?");
+				resposta = key.next();
+				if (resposta.equalsIgnoreCase("s")) {					
+					System.out.print("Ele é carnivoro?");
+					resposta = key.next();
+					if (resposta.equalsIgnoreCase("s")) {					
+						System.out.print("Ele é o LEÃO");
+					} else {
+						System.out.print("Ele é o CAVALO");
+					}
+				} else {
+					System.out.print("Ele é bípede?");
+					resposta = key.next();
+					if (resposta.equalsIgnoreCase("s")) {					
+						System.out.print("Ele é onívoro?");
+						resposta = key.next();
+						if (resposta.equalsIgnoreCase("s")) {					
+							System.out.print("Ele é o HOMEM");
+						} else {
+							System.out.print("Ele é o MACACO");
+						}
+					} else {						
+						System.out.print("Ele é voador?");
+						resposta = key.next();
+						if (resposta.equalsIgnoreCase("s")) {					
+							System.out.print("Ele é o MORCEGO");
+						} else {
+							System.out.print("Ele é a BALEIA");
+						}
+					}
+				}
+			} else {
+				System.out.print("Ele é uma ave?");
+				resposta = key.next();
+				if (resposta.equalsIgnoreCase("s")) {
+					System.out.print("Ele voa?");
+					resposta = key.next();
+					if (resposta.equalsIgnoreCase("n")) {					
+						System.out.print("Ele é tropical");
+						resposta = key.next();
+						if (resposta.equalsIgnoreCase("s")) {					
+							System.out.print("Ele é o AVESTRUZ");
+						} else {
+							System.out.print("Ele é o PINGUIM");
+						}
+					} else {
+						System.out.print("Ele é nadador?");
+						resposta = key.next();
+						if (resposta.equalsIgnoreCase("s")) {					
+							System.out.print("Ele é o PATO");
+						} else {						
+							System.out.print("Ele é de rapina?");
+							resposta = key.next();
+							if (resposta.equalsIgnoreCase("s")) {					
+								System.out.print("Ele é o URUBU");
+							} else {
+								System.out.print("Ele é a CALOPSITA");
+							}
+						}
+					}
+				} else {
+					
+				System.out.print("Ele tem casco?");
+				resposta = key.next();
+				if (resposta.equalsIgnoreCase("s")) {					
+					System.out.print("Ele é a TARTARUGA");
+				} else {	
+					System.out.print("Ele tem patas?");
+					resposta = key.next();
+					if (resposta.equalsIgnoreCase("s")) {					
+						System.out.print("Ele é o JACARÉ");
+					} else {System.out.print("Ele é a COBRA");}
+				}
+			}
 		}
+	}
 }
-	
-	/*
-	 * Programação V - Exercícios de revisão (Condição)
-  
-
-10) Faça um programa que seja capaz de concluir qual dentre os animais seguintes foi escolhido, através de perguntas e respostas.(CASO e SE)
-Exemplo: É mamífero? SIM ? É quadrúpede? SIM ? É carnívoro? NÃO? É herbívoro? SIM Então o animal escolhido foi: cavalo
-Utilize as seguintes classificações: 
-mamíferos -> quadrúpede---> carnívoro -----> leão
-                         -> herbívoro -----> cavalo
-          -> bípede ------> onívoro -------> homem
-                         -> frutífero -----> macaco
-          -> voadores ---------------------> morcego
-          -> aquáticos --------------------> baleia
-aves ------> não voadoras-> tropical ------> avestruz
-                         -> polar ---------> pinguim
-          -> nadadoras --------------------> pato
-          -> de rapina --------------------> águia
-répteis ---> com casco --------------------> tartaruga
-          -> carnívoros -------------------> crocodilo
-          -> sem patas --------------------> cobra
-
-
-*/
